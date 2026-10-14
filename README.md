@@ -54,7 +54,7 @@ sudo apt install git python3 python3-pip -y
 Replace `YOUR-USERNAME` with the GitHub account or organization that owns the `RBPi-Sphero` repository:
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/RBPi-Sphero.git ~/learn_robotics
+git clone https://github.com/krfos1/RBPi-Sphero.git ~/learn_robotics
 ```
 
 This creates a folder named **`learn_robotics`** in the Raspberry Pi user's home directory.

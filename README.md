@@ -1,4 +1,4 @@
-# Robot Boss Workshop
+# Raspberry Pi Robotics Workshop
 
 Starter files and setup instructions for the **Raspberry Pi + Sphero RVR+** robotics workshop.
 
@@ -21,7 +21,7 @@ Gather the following:
 5. Connect the Raspberry Pi power supply. The Raspberry Pi should start booting.
 6. Wait for the Raspberry Pi desktop or initial setup wizard to appear. Follow any on-screen first-time setup prompts.
 
-> **Note:** If the microSD card does not already have Raspberry Pi OS installed, install it using Raspberry Pi Imager on another computer before starting.
+> **Note:** If the microSD card does not already have Raspberry Pi OS installed, install it using Raspberry Pi Imager on another computer before starting. More instructions on this can be found in the Raspberry Pi documentation. 
 
 ### Step 2: Connect to Wi-Fi
 
@@ -50,8 +50,6 @@ sudo apt install git python3 python3-pip -y
 ```
 
 ### Step 6: Download the workshop files
-
-Replace `YOUR-USERNAME` with the GitHub account or organization that owns the `RBPi-Sphero` repository:
 
 ```bash
 git clone https://github.com/krfos1/RBPi-Sphero.git ~/learn_robotics
@@ -90,7 +88,7 @@ Follow the mission instructions. If Python reports a missing module or connectio
 - `mission5.py`: Copy Mission 4 and add turns.
 - `keys.py`: Helper that reads one key press without Enter. Do not edit.
 - `solutions/`: Finished mission versions and `robot_boss.py` (the pro program).
-
+  # Additional Information
 ## Reset a Mission File
 
 To discard uncommitted changes to a mission file and restore the repository version:

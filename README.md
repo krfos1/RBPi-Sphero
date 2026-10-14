@@ -68,17 +68,83 @@ ls
 
 You should see workshop files such as `mission1.py` through `mission5.py`, `keys.py`, and `solutions/`.
 
-### Step 8: Prepare the Sphero RVR+
 
-Before running a mission, make sure the Sphero RVR+ is powered on and connected according to the workshop's hardware and SDK instructions. The exact connection method and any additional Python dependencies must be confirmed from the mission code and robot setup.
+### Step 8: Install and Set Up the Sphero SDK
 
-### Step 9: Run Mission 1
+The Sphero SDK allows the Raspberry Pi to communicate with and control the Sphero RVR+ robot.
+
+**1. Open the Terminal on the Raspberry Pi.**
+
+**2. Navigate to the home directory.**
+
+```bash
+cd ~
+```
+
+**3. Clone the official Sphero SDK from GitHub.**
+
+```bash
+git clone https://github.com/sphero-inc/sphero-sdk-raspberrypi-python.git
+```
+
+**4. Navigate into the Sphero SDK folder.**
+
+```bash
+cd ~/sphero-sdk-raspberrypi-python
+```
+
+**5. Run the first-time setup script.**
+
+```bash
+./first-time-setup.sh
+```
+
+Wait for the installation to finish. This script installs the required Python dependencies and helps configure the Raspberry Pi's serial connection.
+
+**6. Configure the serial port if prompted.**
+
+If the setup script asks you to configure the serial port:
+
+- Disable login shell access over serial.
+- Enable the serial hardware interface.
+- Restart the Raspberry Pi when prompted.
+
+**7. After restarting, open the Terminal and return to the Sphero SDK folder.**
+
+```bash
+cd ~/sphero-sdk-raspberrypi-python
+```
+
+**8. Verify that the SDK folder exists.**
+
+```bash
+ls
+```
+
+You should see folders such as `sphero_sdk` and `getting_started`.
+
+**9. Return to the Robot Boss Workshop folder.**
+
+```bash
+cd ~/learn_robotics
+```
+
+The Raspberry Pi now has both repositories:
+
+- `learn_robotics` — Robot Boss Workshop missions
+- `sphero-sdk-raspberrypi-python` — Official Sphero SDK
+
+**Important:** The Sphero RVR+ must also be connected to the Raspberry Pi through the appropriate UART/GPIO connections before running robot-control programs.
+
+
+### Step 9: Run a Mission
 
 From the `learn_robotics` directory, run:
 
 ```bash
-python3 mission1.py
+python3 <MISSION_NAME>.py
 ```
+> **Note:** Upon first setup you will get an error if you have not gone through the full workshop and edited the code.
 
 Follow the mission instructions. If Python reports a missing module or connection error, ask the workshop instructor to confirm the required Sphero SDK installation and hardware connection.
 

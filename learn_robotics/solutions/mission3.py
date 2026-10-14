@@ -1,7 +1,7 @@
 # Mission 3: Spin like a top!
 import sys, os, time
 
-# Magic lines: don't change these
+# don't change these
 sys.path.append(os.path.expanduser("~/sphero-sdk-raspberrypi-python"))
 from sphero_sdk import SpheroRvrObserver
 

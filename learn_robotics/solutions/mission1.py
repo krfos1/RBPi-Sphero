@@ -1,7 +1,7 @@
 # Mission 1: Wake up and light up!
 import sys, os, time
 
-# Magic lines: don't change these
+# don't change these
 sys.path.append(os.path.expanduser("~/sphero-sdk-raspberrypi-python"))
 from sphero_sdk import SpheroRvrObserver
 

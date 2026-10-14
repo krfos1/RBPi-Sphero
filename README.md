@@ -153,7 +153,7 @@ Follow the mission instructions. If Python reports a missing module or connectio
 - `mission1.py` to `mission4.py`: Starter missions with pre-made headers. Add code below the marker line.
 - `mission5.py`: Copy Mission 4 and add turns.
 - `keys.py`: Helper that reads one key press without Enter. Do not edit.
-- `solutions/`: Finished mission versions and `robot_boss.py` (the pro program).
+- `solutions/`: Finished mission versions.
   # Additional Information
 ## Reset a Mission File
 

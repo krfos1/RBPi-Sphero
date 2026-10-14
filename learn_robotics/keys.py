@@ -1,5 +1,5 @@
 # keys.py: helper that reads ONE key press instantly (no Enter needed).
-# Kids never edit this file. It lives in the same folder as the missions.
+# User should never edit this file.
 import sys, os, time, termios, tty, select
 
 _last_call = 0.0

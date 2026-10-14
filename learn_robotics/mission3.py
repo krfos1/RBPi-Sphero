@@ -1,18 +1,24 @@
-# Mission 3: Spin like a top
+# Mission 3: Spin like a top!
 import sys, os, time
 
-# don't change these
+# Magic lines: don't change these
 sys.path.append(os.path.expanduser("~/sphero-sdk-raspberrypi-python"))
 from sphero_sdk import SpheroRvrObserver
-from keys import get_key
 
 rvr = SpheroRvrObserver()   # make the robot
 rvr.wake()                  # wake it up
 time.sleep(2)               # wait 2 seconds
 
-# ---- Mission 3: Spin like a top ----
-# Type your code below this line (copy it from the slides)
+speed = 64   # 0 is slow, 255 is FAST
 
-# ---- end of your code ----
-rvr.raw_motors(0, 0, 0, 0)   # stop
+# left wheel backward, right wheel forward: spin LEFT
+rvr.raw_motors(2, speed, 1, speed)
+time.sleep(0.5)
+rvr.raw_motors(0, 0, 0, 0)
+
+# left wheel forward, right wheel backward: spin RIGHT
+rvr.raw_motors(1, speed, 2, speed)
+time.sleep(0.5)
+rvr.raw_motors(0, 0, 0, 0)
+
 rvr.close()                 # say goodbye

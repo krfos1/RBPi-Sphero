@@ -1,18 +1,13 @@
-# Mission 1: Wake up and light up!
-import sys, os, time
+# Mission 1 - Move Forward
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
+from robot import RVR
 
-# don't change these
-sys.path.append(os.path.expanduser("~/sphero-sdk-raspberrypi-python"))
-from sphero_sdk import SpheroRvrObserver
+rvr = RVR()
+rvr.wake()
 
-rvr = SpheroRvrObserver()   # make the robot
-rvr.wake()                  # wake it up
-time.sleep(2)               # wait 2 seconds
+rvr.drive(heading=0, speed=64)
+rvr.sleep(2)
 
-red = 255
-green = 0
-blue = 128
-rvr.led_control.set_all_leds_rgb(red=red, green=green, blue=blue)
-
-time.sleep(5)               # enjoy the lights
-rvr.close()                 # say goodbye
+rvr.stop()
+rvr.close()

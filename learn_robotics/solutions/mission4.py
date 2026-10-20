@@ -1,13 +1,49 @@
-# Mission 4 - Turn Right
-import sys, os
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
-from robot import RVR
+#mission4- make it spin like a top.
+import sys
+import time
 
-rvr = RVR()
-rvr.wake()
+sys.path.append('/home/pi/sphero-sdk-raspberrypi-python')
 
-rvr.drive(heading=90, speed=64)
-rvr.sleep(1)
+from sphero_sdk import SpheroRvrObserver
+rvr = SpheroRvrObserver()
 
-rvr.stop()
-rvr.close()
+def main():
+    rvr.wake()
+    time.sleep(2)
+
+    rvr.reset_yaw()
+    time.sleep(2)
+
+    rvr.drive_control.turn_right_degrees(
+        heading=0,
+        amount=90
+    )
+    time.sleep(2)
+
+    rvr.drive_control.turn_right_degrees(
+        heading=90,
+        amount=90
+    )
+    time.sleep(2)
+
+    rvr.drive_control.turn_right_degrees(
+        heading=180,
+        amount=90
+    )
+    time.sleep(2)
+
+    rvr.drive_control.turn_right_degrees(
+        heading=270,
+        amount=90
+    )
+    time.sleep(2)
+
+if __name__ == '__main__':
+    try:
+        main()
+
+    except KeyboardInterrupt:
+        print('\nProgram terminated with keyboard interrupt.')
+
+    finally:
+        rvr.close()

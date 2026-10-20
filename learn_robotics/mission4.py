@@ -14,29 +14,10 @@ def main():
     rvr.reset_yaw()
     time.sleep(2)
 
-    rvr.drive_control.turn_right_degrees(
-        heading=0,
-        amount=90
-    )
-    time.sleep(2)
+# your code here
 
-    rvr.drive_control.turn_right_degrees(
-        heading=90,
-        amount=90
-    )
-    time.sleep(2)
 
-    rvr.drive_control.turn_right_degrees(
-        heading=180,
-        amount=90
-    )
-    time.sleep(2)
 
-    rvr.drive_control.turn_right_degrees(
-        heading=270,
-        amount=90
-    )
-    time.sleep(2)
 
 if __name__ == '__main__':
     try:

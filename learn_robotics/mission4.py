@@ -14,7 +14,9 @@ def main():
     rvr.reset_yaw()
     time.sleep(2)
 
-# your code here
+    # your code here
+    # make sure to give it bit of time to think before each turn.
+    # don't forget to adjust the heading after each move.
 
 
 

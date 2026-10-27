@@ -14,6 +14,12 @@ def main():
     rvr.reset_yaw()
     time.sleep(2)
     # Your code here
+    #drive forward
+
+    #turn right
+
+
+    #drive forward
 
 
 

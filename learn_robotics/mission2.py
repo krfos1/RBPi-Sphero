@@ -6,12 +6,12 @@ sys.path.append('/home/pi/sphero-sdk-raspberrypi-python')
 
 from sphero_sdk import SpheroRvrObserver
 #Your code here
-
+#drive forwards
 
 
 
 #bonus: if you can also make it return to its original position, try driving backwards.
-
+#drive backwards
 
 
 
